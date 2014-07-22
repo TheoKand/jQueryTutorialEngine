@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery Tip Engine - Example</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="TipEngine.js"></script>
+    <style type="text/css">
+        /* CSS for the overlay layer that covers the entire page when the tutorial is displayed. Only the element that the current tip is about is made visible and also highlighted with a "glow" */
+        #DarkLayer {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            opacity: 0.6;
+            z-index: 10;
+        }
+
+        .Glow {
+            box-shadow: 0 0 20px 10px white;
+        }
+        /* CSS for the "bubble" that contains the tip of the current element
+        */
+        #TipLayer {
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            position: absolute;
+            z-index: 11;
+            text-align: center;
+            padding: 5px;
+            background-color: White;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            TipEngine.tips = [{
+                elem: "#content2",
+                tipHtml: "<h3>Area 1</h3>This is the description of area1. Click anywhere outside of this baloon, to close the tutorial. Click inside here to go to the next 'slide' ",
+                left: "50%",
+                top: "5%",
+                width: "45%",
+                height: "50%"
+            }, {
+                elem: "#content1",
+                tipHtml: "<h2>Area 2</h3>Area2 is <B>also very important bla bla bla ",
+                left: "50%",
+                top: "25%",
+                width: "45%",
+                height: "50%"
+            }];
+
+
+            $("#helpLink").click(function () {
+                TipEngine.current = 0;
+                TipEngine.showTip();
+                return false;
+            });
+
+
+
+        });
+
+
+
+    </script>
+
+</head>
+<body>
+
+
+    <div id="container" style="height:100%;width:100%;position:absolute;top:0;left:0">
+        <div id="content1" style="width: 30%;height:30%;margin:2%;background-color:yellow;position:relative;">Area #1</div>
+        <div id="content2" style="width: 40%;height:30%;margin:2%;background-color:green;position:relative;">Area #2</div>
+        
+        <a href="$" id="helpLink">Click here to see the tutorial</a>
+
+    </div>
+
+
+</body>
+</html>
