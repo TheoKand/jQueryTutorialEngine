@@ -8,7 +8,7 @@ tips that are displayed one at a time. The only  requirement for the existing UI
 have absolute CSS positioning so that the z-index CSS attribute works properly.
 
 Online demo : http://mvctest.theokand.com/jquerytipengine/
-JSFiddle: http://jsfiddle.net/TheoKand/SRuh7/13/
+JSFiddle: http://jsfiddle.net/TheoKand/SRuh7/16/
 
 Screenshots:
 https://github.com/TheoKand/jQueryTutorialEngine/blob/master/Screenshots/2.png

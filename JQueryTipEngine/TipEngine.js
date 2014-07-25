@@ -42,8 +42,8 @@ $("#helpLink").click(function () {
  */
 
 
-var TipEngine = {
 
+var TipEngine = {
 
     tipData: function (elem, tipHtml, left, top, width, height) {
         this.elem = elem;
@@ -58,6 +58,7 @@ var TipEngine = {
 
         //initialize stuff when the first tip is displayed
         if (!TipEngine.darkLayer) {
+            //your page should have a top level DIV that contains everything else
             TipEngine.container = $("#container");
             TipEngine.darkLayer = $("<div/>").attr("id", "DarkLayer");
         }
@@ -80,13 +81,14 @@ var TipEngine = {
             .addClass("Glow")
             .html(tip.tipHtml);
 
-        //clicking on a single tip 
+        //clicking on a tip will go to the next one
         if (TipEngine.current < TipEngine.tips.length - 1) {
             TipEngine.tipLayer.append("<p><a href='#'>Next</a></p>").click(function () {
                 TipEngine.nextTip();
                 return false;
             });
         } else {
+            //if it's the last one, then just close the tutorial
             TipEngine.tipLayer.click(function () {
                 $(TipEngine.tipElement).css("z-index", "9").removeClass("Glow");
                 TipEngine.tipLayer.remove();
@@ -98,6 +100,7 @@ var TipEngine = {
 
         TipEngine.container.append(TipEngine.tipLayer);
 
+        //also close the tutorial when the user clicks anywhere outside the tip
         $(document).click(function () {
             $(TipEngine.tipElement).css("z-index", "9").removeClass("Glow");
             TipEngine.tipLayer.remove();
@@ -108,6 +111,7 @@ var TipEngine = {
         });
     },
 
+    //go to the next step, as defined in the array that was passed in the tip engine initialization
     nextTip: function () {
         $(TipEngine.tipElement).css("z-index", "9").removeClass("Glow");
         TipEngine.tipLayer.remove();
@@ -117,8 +121,6 @@ var TipEngine = {
             TipEngine.showTip();
         }
     },
-
-
 
 };
 
