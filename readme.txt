@@ -1,11 +1,11 @@
 ﻿jQuery Tutorial Engine
 ----------------------
 
-The purpose of this small library is to allow the declerative creation of a quick-and-dirty tutorial that can be overlayed on an existing web page.
+The purpose of this small library is to create a quick-and-dirty tutorial that can be overlayed on an existing web page.
 
 A dark semi-translarent layer (css class DarkLayer, opacity : 0.6) is overlayed on the page. Then one element at a time is highlighted and at the same time a baloon with the "help tip" for this element or site section is displayed. The tutorial can be made up of many tips that are displayed sequentially.
 
-The only  requirement for the existing UI is that the elements that are bound to the tutorial have absolute CSS positioning so that the z-index CSS attribute works properly.
+The only  requirement sfor the existing UI is that the elements that are bound to the tutorial have absolute CSS positioning so that the z-index CSS attribute works properly, and also that your page has a top level DIV container.
 
 Online demo : http://mvctest.theokand.com/jquerytipengine/
 JSFiddle: http://jsfiddle.net/TheoKand/SRuh7
