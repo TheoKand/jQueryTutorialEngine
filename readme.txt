@@ -2,13 +2,13 @@
 ----------------------
 
 The purpose of this small library is to allow the declerative creation of a quick-and-dirty tutorial that can be overlayed on an existing web page.
-A dark semi-translarent layer (css class DarkLayer, opacity : 0.6) is overlayed on the page. Then one element at a time is highlighted
-and at the same time a baloon with the "help tip" for this element or site section is displayed. The tutorial can be made up of many
-tips that are displayed one at a time. The only  requirement for the existing UI is that the elements that are bound to the tutorial
-have absolute CSS positioning so that the z-index CSS attribute works properly.
+
+A dark semi-translarent layer (css class DarkLayer, opacity : 0.6) is overlayed on the page. Then one element at a time is highlighted and at the same time a baloon with the "help tip" for this element or site section is displayed. The tutorial can be made up of many tips that are displayed sequentially.
+
+The only  requirement for the existing UI is that the elements that are bound to the tutorial have absolute CSS positioning so that the z-index CSS attribute works properly.
 
 Online demo : http://mvctest.theokand.com/jquerytipengine/
-JSFiddle: http://jsfiddle.net/TheoKand/SRuh7/16/
+JSFiddle: http://jsfiddle.net/TheoKand/SRuh7
 Code Project article: http://www.codeproject.com/Tips/799641/Overlay-a-tutorial-on-an-existing-web-page-with-jQ
 
 Screenshots:
