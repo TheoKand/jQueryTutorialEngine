@@ -45,14 +45,6 @@ $("#helpLink").click(function () {
 
 var TipEngine = {
 
-    tipData: function (elem, tipHtml, left, top, width, height) {
-        this.elem = elem;
-        this.tipHtml = tipHtml;
-        this.left = left;
-        this.top = top;
-        this.width = width;
-        this.height = height;
-    },
 
     showTip: function () {
 
